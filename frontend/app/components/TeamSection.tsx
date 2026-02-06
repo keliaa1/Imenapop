@@ -19,15 +19,15 @@ export function TeamSection({ isDarkMode }: TeamSectionProps) {
             <span
               className={`font-bold text-sm tracking-wide mb-4 block transition-colors ${isDarkMode ? "text-gray-400" : "text-gray-500"}`}
             >
-              Meet the People Behind the Pixels
+              Hear from our happy clients
             </span>
             <div className="relative">
               <h2
                 className={`text-2xl sm:text-4xl md:text-6xl font-bold mb-2 leading-tight transition-colors ${isDarkMode ? "text-white" : "text-gray-900"}`}
               >
-                Our Super Squad of Creatives
+                What Our Clients Say
               </h2>
-              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-48 h-2 bg-orange-100/60 rounded-full blur-[1px]" />
+              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-48 h-2 bg-[#e63946] rounded-full blur-[1px]" />
             </div>
           </div>
         </FadeInOnScroll>
@@ -66,20 +66,19 @@ export function TeamSection({ isDarkMode }: TeamSectionProps) {
                   <div className="w-24 h-24 mx-auto mb-6 bg-purple-100 rounded-full flex items-center justify-center p-1 border-4 border-white shadow-sm overflow-hidden relative">
                     <Image
                       src="/team/esther.png"
-                      alt="Esther Howard"
+                      alt="Amandine"
                       fill
                       className="object-cover"
                     />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-1">
-                    Esther Howard
+                    Kaneza Amandine
                   </h3>
-                  <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">
+                  <p className="text-xs font-bold text-[#e63946] uppercase tracking-widest mb-3">
                     Designer
                   </p>
                   <p className="text-xs text-gray-500 italic leading-relaxed">
-                    &ldquo;Working with Imena has been transformative. Their
-                    attention to detail is unmatched.&rdquo;
+                    This project is truly spectacular, this team deserves all the awards
                   </p>
                 </div>
               </div>
@@ -98,14 +97,13 @@ export function TeamSection({ isDarkMode }: TeamSectionProps) {
                     />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-1">
-                    Annette Black
+                    Ntwali Yanis
                   </h3>
-                  <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">
+                  <p className="text-xs font-bold text-[#e63946] uppercase tracking-widest mb-3">
                     Developer
                   </p>
                   <p className="text-xs text-gray-500 italic leading-relaxed">
-                    &ldquo;The creativity and professionalism here is beyond
-                    anything I&apos;ve experienced before.&rdquo;
+                    This solution is truly amazing, if this team doesn't win the hackathon, I don't know who will
                   </p>
                 </div>
               </div>
@@ -124,14 +122,13 @@ export function TeamSection({ isDarkMode }: TeamSectionProps) {
                     />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-1">
-                    Arlene McCoy
+                    Arlene Ishimwe
                   </h3>
-                  <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">
+                  <p className="text-xs font-bold text-[#e63946] uppercase tracking-widest mb-3">
                     SEO Ex.
                   </p>
                   <p className="text-xs text-gray-500 italic leading-relaxed">
-                    &ldquo;Every project is handled with dedication. Truly a
-                    game-changer for our events.&rdquo;
+                    I loved their product, They are truly creative! Wish the best for them. Their project was soo much efficient and better than ours
                   </p>
                 </div>
               </div>

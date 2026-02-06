@@ -27,6 +27,43 @@ export function TemplatesSection({
     <section
       className={`py-16 sm:py-24 md:py-32 px-4 overflow-hidden relative border-t transition-colors duration-300 ${isDarkMode ? "bg-[#0d1117] border-gray-800" : "bg-[#f8f8f8] border-gray-100"}`}
     >
+      {/* Background Curves */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden select-none">
+        <svg
+          className="absolute top-0 left-0 w-full h-full opacity-[0.4]"
+          viewBox="0 0 1440 800"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M-100 600 C 200 400, 600 800, 1540 500"
+            stroke={isDarkMode ? "rgba(255,255,255,0.03)" : "rgba(0,0,0,0.03)"}
+            strokeWidth="2"
+            fill="none"
+          />
+          <path
+            d="M-100 700 C 300 500, 700 900, 1540 600"
+            stroke={isDarkMode ? "rgba(255,255,255,0.02)" : "rgba(0,0,0,0.02)"}
+            strokeWidth="2"
+            fill="none"
+          />
+          <path
+            d="M-100 300 C 400 100, 900 600, 1540 300"
+            stroke={isDarkMode ? "rgba(255,255,255,0.04)" : "rgba(0,0,0,0.04)"}
+            strokeWidth="1.5"
+            fill="none"
+          />
+        </svg>
+        {/* Soft Blobs for depth */}
+        <div
+          className={`absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full blur-[120px] opacity-20 ${isDarkMode ? "bg-blue-900/20" : "bg-blue-200/40"}`}
+        />
+        <div
+          className={`absolute -bottom-[20%] -right-[10%] w-[50%] h-[50%] rounded-full blur-[120px] opacity-20 ${isDarkMode ? "bg-purple-900/20" : "bg-purple-200/40"}`}
+        />
+      </div>
+
       <div className="max-w-7xl mx-auto relative z-10">
         <FadeInOnScroll>
           <div className="text-center mb-16">

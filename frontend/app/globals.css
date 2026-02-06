@@ -668,10 +668,11 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background: #1c2541;
+  background: #e63946;
   transition: width 0.3s ease;
 }
 
 .underline-animate:hover::after {
   width: 100%;
+  background: #e63946;
 }

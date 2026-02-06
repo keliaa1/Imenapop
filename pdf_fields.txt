@@ -1,5 +1,0 @@
-Fields found:
-- Text Box 1 (PDFTextField)
-- Text Box 2 (PDFTextField)
-- Text Box 3 (PDFTextField)
-- Text Box 4 (PDFTextField)

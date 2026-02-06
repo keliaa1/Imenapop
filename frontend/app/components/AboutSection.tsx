@@ -11,16 +11,17 @@ export function AboutSection() {
           <FadeInOnScroll>
             <div className="text-white">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-8">
-                We Turn
+                We’re redefining
                 <br />
-                Ideas into
+                how digital documents
                 <br />
-                Visual Masterpieces
+                are created
               </h2>
               <p className="text-gray-400 text-sm sm:text-base leading-relaxed mb-8 max-w-md">
-                Whether it&apos;s an engaging explainer video, a vibrant social
-                media campaign, or captivating motion graphics, we bring
-                creativity and expertise to every project.
+                We’re redefining how digital documents are created. By combining
+                performance, design, and automation, we aim to eliminate
+                repetitive work and give users tools that feel effortless and
+                powerful. The future of document creation starts here.
               </p>
               <button className="px-6 py-3 border border-gray-600 rounded-full text-white text-sm font-medium hover:bg-white hover:text-[#0d1117] transition-all hover:scale-105 active:scale-95">
                 Know More About us
@@ -34,13 +35,13 @@ export function AboutSection() {
             <FadeInOnScroll delay={100}>
               <div className="text-white">
                 <div className="text-4xl sm:text-5xl md:text-6xl font-bold mb-3">
-                  <CountUp end={200} suffix="+" />
+                  <CountUp end={30} suffix="+" />
                 </div>
                 <div className="inline-block bg-[#1a2332] text-[10px] sm:text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full text-gray-300 mb-3">
-                  Projects Delivered
+                  Pdfs Created
                 </div>
                 <p className="text-gray-400 text-sm leading-relaxed">
-                  Creative work that drives real results
+                  Pdfs created with love and care
                 </p>
               </div>
             </FadeInOnScroll>
@@ -51,11 +52,11 @@ export function AboutSection() {
                 <div className="text-4xl sm:text-5xl md:text-6xl font-bold mb-3">
                   <CountUp end={100} suffix="+" />
                 </div>
-                <div className="inline-block bg-[#1a2332] text-[10px] sm:text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full text-gray-300 mb-3">
+                <div className="inline-block bg-[#1a2332] text-[10px] sm:text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full text-[#e63946] mb-3">
                   Happy Clients
                 </div>
                 <p className="text-gray-400 text-sm leading-relaxed">
-                  Brands that keep coming back for more
+                  Clients who love our work
                 </p>
               </div>
             </FadeInOnScroll>
@@ -63,14 +64,14 @@ export function AboutSection() {
             {/* Stat 3 */}
             <FadeInOnScroll delay={300}>
               <div className="text-white">
-                <div className="text-4xl sm:text-5xl md:text-6xl font-bold mb-3">
-                  <CountUp end={15} />
+                <div className="text-4xl sm:text-5xl md:text-6xl font-bold mb-3 text-[#e63946]">
+                  <CountUp end={2} />
                 </div>
                 <div className="inline-block bg-[#1a2332] text-[10px] sm:text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full text-gray-300 mb-3">
                   Years of Experience
                 </div>
                 <p className="text-gray-400 text-sm leading-relaxed">
-                  Mastering the art of animation, content and design
+                  We've been in the business for 2 years
                 </p>
               </div>
             </FadeInOnScroll>
@@ -78,7 +79,7 @@ export function AboutSection() {
             {/* Stat 4 */}
             <FadeInOnScroll delay={400}>
               <div className="text-white">
-                <div className="text-4xl sm:text-5xl md:text-6xl font-bold mb-3">
+                <div className="text-4xl sm:text-5xl md:text-6xl font-bold mb-3 text-[#e63946]">
                   <CountUp end={95} suffix="%" />
                 </div>
                 <div className="inline-block bg-[#1a2332] text-[10px] sm:text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full text-gray-300 mb-3">

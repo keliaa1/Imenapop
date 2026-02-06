@@ -184,7 +184,7 @@ function FormContent() {
 
   const handleNext = async () => {
     if (currentStep < TOTAL_STEPS) {
-      setIsAnimating(true); 
+      setIsAnimating(true);
       setTimeout(() => {
         setCurrentStep((prev) => prev + 1);
         setIsAnimating(false);
@@ -197,11 +197,14 @@ function FormContent() {
   const generatePdf = async () => {
     setIsGenerating(true);
     try {
-      const response = await fetch("https://paper-pop-backend-mruc.onrender.com/generate-pdf", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...formData, templateId }),
-      });
+      const response = await fetch(
+        "https://paper-pop-backend-mruc.onrender.com/generate-pdf",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ ...formData, templateId }),
+        },
+      );
 
       if (response.ok) {
         const blob = await response.blob();
@@ -221,8 +224,8 @@ function FormContent() {
 
   return (
     <div className="flex min-h-screen bg-black font-sans text-gray-900 overflow-hidden">
-      {/* Sidebar */}
-      <aside className="w-80 border-r border-gray-100 flex flex-col p-10 bg-[#fafafa] z-20">
+      {/* Sidebar - Hidden on small/medium screens */}
+      <aside className="hidden lg:flex w-80 border-r border-gray-100 flex-col p-10 bg-[#fafafa] z-20">
         <div className="mb-16">
           <Link
             href="/"
@@ -296,7 +299,29 @@ function FormContent() {
 
       {/* Main Content */}
       <main className="flex-1 flex flex-col relative bg-white">
-        <header className="flex items-center justify-between px-16 py-8 relative z-10">
+        {/* Mobile Header & Progress (Visible only on small/medium screens) */}
+        <div className="lg:hidden px-6 py-6 border-b border-gray-100 bg-white">
+          <div className="flex items-center justify-between mb-6">
+            <Link
+              href="/"
+              className="text-2xl font-bold text-[#1C2541] tracking-tight"
+            >
+              imenapop
+            </Link>
+            <div className="text-xs font-bold text-gray-400 uppercase tracking-widest">
+              Step {currentStep}/{TOTAL_STEPS}
+            </div>
+          </div>
+          {/* Mobile Linear Progress */}
+          <div className="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
+            <div
+              className="h-full bg-[#3A506B] transition-all duration-500 ease-out"
+              style={{ width: `${percentage}%` }}
+            />
+          </div>
+        </div>
+
+        <header className="hidden lg:flex items-center justify-between px-16 py-8 relative z-10">
           <div className="flex items-center gap-2 text-sm">
             <span className="text-gray-400 font-medium">
               Selected Template:
@@ -314,23 +339,23 @@ function FormContent() {
           </Link>
         </header>
 
-        <div className="flex-1 flex flex-col items-center justify-center p-16">
+        <div className="flex-1 flex flex-col items-center justify-center p-6 lg:p-16">
           <div
-            className={`max-w-xl w-full text-center mb-16 transition-all duration-500 ${isAnimating ? "opacity-0 -translate-y-4" : "opacity-100 translate-y-0"}`}
+            className={`max-w-xl w-full text-center mb-10 lg:mb-16 transition-all duration-500 ${isAnimating ? "opacity-0 -translate-y-4" : "opacity-100 translate-y-0"}`}
           >
             <span className="text-[10px] font-bold text-gray-300 uppercase tracking-[0.3em] mb-4 block">
               {currentStepData.category} — Step {currentStep}
             </span>
-            <h1 className="text-5xl font-bold text-gray-800 tracking-tight leading-tight mb-4">
+            <h1 className="text-3xl lg:text-5xl font-bold text-gray-800 tracking-tight leading-tight mb-4">
               {currentStepData.question}
             </h1>
-            <p className="text-gray-400 font-medium">
+            <p className="text-gray-400 font-medium text-sm lg:text-base">
               {currentStepData.instruction}
             </p>
           </div>
 
           <div
-            className={`max-w-2xl w-full mb-16 transition-all duration-500 delay-75 ${isAnimating ? "opacity-0 translate-y-4" : "opacity-100 translate-y-0"}`}
+            className={`max-w-2xl w-full mb-10 lg:mb-16 transition-all duration-500 delay-75 ${isAnimating ? "opacity-0 translate-y-4" : "opacity-100 translate-y-0"}`}
           >
             {(currentStepData.type === "text" ||
               currentStepData.type === "number") && (
@@ -340,7 +365,7 @@ function FormContent() {
                 value={formData[currentStepData.field] || ""}
                 onChange={handleInputChange}
                 placeholder={currentStepData.placeholder}
-                className="w-full bg-transparent border-b-2 border-gray-100 py-6 text-3xl font-medium outline-none placeholder:text-gray-200 focus:border-[#1C2541] transition-colors"
+                className="w-full bg-transparent border-b-2 border-gray-100 py-4 lg:py-6 text-2xl lg:text-3xl font-medium outline-none placeholder:text-gray-200 focus:border-[#1C2541] transition-colors"
                 autoFocus
               />
             )}
@@ -351,7 +376,7 @@ function FormContent() {
                 onChange={handleInputChange}
                 placeholder={currentStepData.placeholder}
                 rows={3}
-                className="w-full bg-transparent border-b-2 border-gray-100 py-6 text-2xl font-medium outline-none placeholder:text-gray-200 focus:border-[#1C2541] transition-colors resize-none"
+                className="w-full bg-transparent border-b-2 border-gray-100 py-4 lg:py-6 text-xl lg:text-2xl font-medium outline-none placeholder:text-gray-200 focus:border-[#1C2541] transition-colors resize-none"
                 autoFocus
               />
             )}

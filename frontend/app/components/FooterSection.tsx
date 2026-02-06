@@ -17,21 +17,21 @@ export function FooterSection() {
         {/* Top Section: "f." and Links */}
         <div className="flex flex-col md:flex-row justify-between items-start w-full text-[#faf6f1] px-4">
           <div className="flex flex-col gap-4 mb-8 md:mb-0">
-            <span className="font-serif italic text-5xl">f.</span>
+            <span className="font-serif italic text-5xl">an Imena courtesy</span>
             <p className="max-w-[220px] text-sm text-gray-300 leading-relaxed font-light">
-              Inspire, educate and entertain entrepreneurs.
+              A family based in Rwanda coding academy
             </p>
           </div>
 
           <div className="flex gap-16 text-sm font-medium">
             <div className="flex flex-col gap-3">
-              <Link href="#" className="hover:text-white transition-colors">Channels</Link>
-              <Link href="#" className="hover:text-white transition-colors">The Vision</Link>
+              <Link href="#" className="hover:text-white transition-colors">Home</Link>
+              <Link href="#" className="hover:text-white transition-colors">About</Link>
               <Link href="#" className="hover:text-white transition-colors">Gallery</Link>
             </div>
             <div className="flex flex-col gap-3">
-              <Link href="#" className="hover:text-white transition-colors">Events</Link>
-              <Link href="#" className="hover:text-white transition-colors">Partners</Link>
+              <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
+              <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
             </div>
             <div className="flex flex-col gap-3">
               <Link href="#" className="hover:text-white transition-colors">Cookies</Link>
@@ -70,7 +70,7 @@ export function FooterSection() {
             </div>
 
             <p className="text-xs text-[#1C2541]/70 font-medium mt-auto">
-              We promise, no spaaaaaaam <span className="text-[#e63946]">(f*ck the spammers)</span>
+             we goiinnnnnn uppppp <span className="text-[#e63946]">(with Prime)</span>
             </p>
           </div>
 

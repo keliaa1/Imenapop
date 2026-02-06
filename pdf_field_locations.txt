@@ -1,5 +1,0 @@
-Field Details:
-- Text Box 1 (PDFTextField) | Pos: x=379.983, y=394.186, w=68.06200000000001, h=23.04400000000004
-- Text Box 2 (PDFTextField) | Pos: x=127.983, y=196.186, w=374.062, h=23.072000000000003
-- Text Box 3 (PDFTextField) | Pos: x=217.983, y=664.186, w=185.048, h=23.072000000000003
-- Text Box 4 (PDFTextField) | Pos: x=199.275, y=52.186, w=185.076, h=86.05799999999999
