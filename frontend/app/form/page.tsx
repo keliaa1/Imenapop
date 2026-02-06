@@ -203,13 +203,13 @@ function FormContent() {
         body: JSON.stringify({ ...formData, templateId }),
       });
 
-      // if (response.ok) {
-      //   const blob = await response.blob();
-      //   const url = window.URL.createObjectURL(blob);
-      //   setPdfUrl(url);
-      // } else {
-      //   console.error("Failed to generate PDF");
-      // }
+      if (response.ok) {
+        const blob = await response.blob();
+        const url = window.URL.createObjectURL(blob);
+        setPdfUrl(url);
+      } else {
+        console.error("Failed to generate PDF");
+      }
     } catch (error) {
       console.error("Error generating PDF:", error);
     } finally {
